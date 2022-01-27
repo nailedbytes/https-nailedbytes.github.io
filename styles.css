@@ -45,12 +45,22 @@ ul.leaders .price {
   text-align: right;
 }
 
+.top-space {
+  padding-top: 4px;
+}
+
 .bottom-space {
   padding-bottom: 27px;
 }
 
 p.bottom-space {
   padding-bottom: 8px;
+}
+
+.top-padding {
+  padding: 0;
+  margin: 0;
+  padding-top: 8px
 }
 
 .no-top-space {
