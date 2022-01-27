@@ -1,0 +1,79 @@
+:root {
+  --bg-color: #efefef;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #231f20;
+}
+
+.container {
+  max-width: 549px;
+}
+
+ul.leaders {
+  max-width: 40em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+ul.leaders li.dots:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content: '. . . . . . . . . . . . . . . . . . . . ' '. . . . . . . . . . . . . . . . . . . . '
+    '. . . . . . . . . . . . . . . . . . . . ' '. . . . . . . . . . . . . . . . . . . . ';
+}
+
+ul.leaders .name {
+  padding-right: 0.33em;
+  background: var(--bg-color);
+}
+
+ul.leaders .price {
+  float: right;
+  padding-left: 0.33em;
+  background: var(--bg-color);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bottom-space {
+  padding-bottom: 27px;
+}
+
+p.bottom-space {
+  padding-bottom: 8px;
+}
+
+.no-top-space {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.no-bottom-space {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.negative-bottom-space {
+  margin-bottom: -8px;
+}
+
+.discount-image {
+  padding-right: 27px;
+  padding-bottom: 9px;
+  width: 209px;
+}
+
+ol.hide-numbers {
+  list-style-type: none;
+  padding-left: 20px;
+}
