@@ -81,3 +81,7 @@ ol.hide-numbers {
 a {
   color: gray;
 }
+
+.mini-menu .active {
+  color: #4b4b4b;
+}
