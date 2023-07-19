@@ -9,6 +9,10 @@ body {
   font-family: 'Montserrat', serif;
 }
 
+body.brow-lami {
+  background-color: #a0af6c;
+}
+
 .container {
   max-width: 549px;
 }
