@@ -11,6 +11,9 @@ body {
 
 body.brow-lami {
   background-color: #a0af6c;
+  color: white;
+  font-weight: 800;
+  font-style: italic;
 }
 
 .container {
