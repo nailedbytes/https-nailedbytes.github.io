@@ -9,8 +9,7 @@ body {
   font-family: 'Montserrat', serif;
 }
 
-.page,
-.page > .container > p:not('.mini-menu') {
+.page {
   font-weight: 600;
   font-style: italic;
   letter-spacing: 0.2px;
@@ -33,6 +32,10 @@ body {
 
 .brow-lami-page {
   background-color: #a0af6c;
+}
+
+.brow-lami-page,
+.brow-lami-page a {
   color: white;
 }
 
