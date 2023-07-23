@@ -12,17 +12,17 @@ body {
 .page {
   font-weight: 600;
   font-style: italic;
-  letter-spacing: 0.6px;
+  letter-spacing: -0.2px;
   font-size: 15px;
   line-height: 1.4;
 }
 
 .page h1 {
   font-size: 19px;
-  letter-spacing: 1px;
-  margin-top: 80px;
-  margin-bottom: 8px;
-  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-top: 64px;
+  margin-bottom: 4px;
+  font-weight: 700;
   line-height: 1.2;
 }
 
