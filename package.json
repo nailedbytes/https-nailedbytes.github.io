@@ -1,0 +1,19 @@
+{
+  "name": "nailedbytes.github.io",
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "familydiscount": "http-server -p 8000 -o /familydiscount/",
+    "prices": "http-server -p 8000 -o /prices/",
+    "pricelist": "http-server -p 8000 -o /pricelist/",
+    "brow-lami": "http-server -p 8000 -o /brow-lami/",
+    "items": "http-server -p 8000 -o /items/",
+    "lami-aftercare": "http-server -p 8000 -o /lami-aftercare/",
+    "policy": "http-server -p 8000 -o /policy/",
+    "pricelist1": "http-server -p 8000 -o /pricelist1/",
+    "pricing": "http-server -p 8000 -o /pricing/",
+    "products": "http-server -p 8000 -o /products/"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
+  }
+}
