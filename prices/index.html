@@ -1,33 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>TÉ SALON BY TES</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TÉ SALON BY TES</title>
 
-      <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Montserrat:400,600">
-      <link rel="stylesheet" href="/new-styles.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-   </head>
-   <body>
-      <div class="container">
-         <p class="mini-menu">
-            <a href="/familydiscount" class="active">CENIK IN STORITVE</a>  | 
-            <a href="/items">IZDELKI</a> | 
-            <a href="/brow-lami">LAMINACIJA</a> | 
-            <a href="/policy">NAROČANJE</a>
-         </p>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600" />
+    <link rel="stylesheet" href="/new-styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .flags {
+        font-size: 25px;
+      }
 
-<html>
-<body>
-   <iframe style="width: calc(100vw - 27px); height: calc(100vh - 68px); max-width: 991px;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSG-gwEh5DsYrjdiy2DpvxhTQS-ybYNgnG4LqegVTKNZaQIOjUquvJ3tlWjjkJpSZzDvT3shTiWbFY4/pubhtml?widget=true&amp;headers=false"></iframe>
+      .flag {
+        cursor: pointer;
+      }
 
-<!-- 
-   <img src="https://i.postimg.cc/SKfVVhQz/PRICELIST-Sheet1-page-0001.jpg" alt="PRICELIST-Sheet1-page-0001" border="0"></a>
-   <img src="https://i.postimg.cc/KjkPXSbf/PRICELIST-Sheet1-page-0002.jpg" alt="PRICELIST-Sheet1-page-0002" border="0"></a>
--->
-   
-</body>
+      iframe {
+        width: calc(100vw - 27px);
+        height: calc(100vh - 68px);
+        max-width: 991px;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const enFlag = document.getElementById('en');
+        const siFlag = document.getElementById('si');
+        const enIframe = document.getElementById('enIframe');
+        const siIframe = document.getElementById('siIframe');
+
+        enFlag?.addEventListener('click', () => {
+          siIframe.classList.add('hide');
+          enIframe.classList.remove('hide');
+        });
+
+        siFlag?.addEventListener('click', () => {
+          enIframe.classList.add('hide');
+          siIframe.classList.remove('hide');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flags">
+        <span id="en" class="flag">🇬🇧</span>
+        <span id="si" class="flag">🇸🇮</span>
+      </div>
+
+      <iframe
+        id="enIframe"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTErYTE6DgRWi2VYoGPrfOJyR1Yifa3fjHRxOZEM6W5k1EPa5_WJHGZs1wzmF1ZapBqPmWcvIv2lxzH/pubhtml?widget=true&amp;headers=false"></iframe>
+
+      <iframe
+        id="siIframe"
+        class="hide"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTnLR_sVuFBNQKqFqhZAqOdnfZ027Is6GxB2NxqRQ0SO-VpIQsK7PnH0MYaW2g_6TcMA5hgiL5xLue9/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
+  </body>
 </html>
