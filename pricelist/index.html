@@ -5,191 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TÉ SALON BY TES</title>
-    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600" />
+    <link rel="stylesheet" href="/new-styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .flags {
+        font-size: 25px;
+      }
+
+      .flag {
+        cursor: pointer;
+      }
+
+      iframe {
+        width: calc(100vw - 27px);
+        height: calc(100vh - 68px);
+        max-width: 379px;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .footer {
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const enFlag = document.getElementById('en');
+        const siFlag = document.getElementById('si');
+        const enIframe = document.getElementById('enIframe');
+        const siIframe = document.getElementById('siIframe');
+
+        enFlag?.addEventListener('click', () => {
+          siIframe.classList.add('hide');
+          enIframe.classList.remove('hide');
+        });
+
+        siFlag?.addEventListener('click', () => {
+          enIframe.classList.add('hide');
+          siIframe.classList.remove('hide');
+        });
+      });
+    </script>
   </head>
   <body>
-    <div class="container">
-      <p class="mini-menu">
-        <a href="/pricelist" class="active">CENIK IN STORITVE</a>  | 
-        <a href="/products">IZDELKI</a> | 
-        <a href="/lami-aftercare">NEGA LAMINACIJE</a>
-      </p>
-      
-      <h1>MANIKIRA</h1>
+    <div class="flags">
+      <span id="si" class="flag">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArUlEQVR4nGNgGHCwePuZ/5RgBhDx6dd/sjCKAcednf/7VW2FYxCfJAOOuLj+79nw/P/S45/BNIhPlAF+UBu3ewf/v3Lj1f8vP/79v3z95f9tPiEoLsKFGUBE9/YP/+dmNP0/sWLbfxA4vmwLmA8Sx4dRDOhede//Tp+Q/4emLALTID7RBvhBcUTZmv898TVgmhjngw047uz8/3t/P1kYpJdhcBhwnAI80FmRgQEA03xDzhFFcQEAAAAASUVORK5CYII=" />
+      </span>
+      <span id="en" class="flag">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBklEQVR4nNWSTUsCURSG/W+zd+GPEBcqiAshF4LbaNkiWrkraEQXZRshV1JYweRoXs1KE0dTM5kJXD1xBwwOaNAHRC+8HO45Lw8XzgkE/lzBrWO+6w/AbTrNtDekeOWxXZr71qoahl9Xvf3Kgo5yUNmsBPRzOWqhEEPTpO0s2TtbCMDO6ZxK02NwZPo5nReAfM1lfNenmUphhcO82A0BGFiKm2gUO5Fgou4pXnsSsEkrwDoJQNUwvuzf/UH+0uO508NOJrEiEWaNlgDM2l3qsRj1eJyJ6nJivW3YQqGA/bRkt/wqAPqt+3q+dgutTIbx44jDC/fTOzg4d3EeRn5eAII/ucT/r3fXzvdhBUssZwAAAABJRU5ErkJggg==" />
+      </span>
+    </div>
 
-      <ul class="leaders bottom-space">
-        <li class="dots"><span class="name">KOMBINIRANA MANIKIRA</span> <span class="price">15€</span></li>
-      </ul>
-      <p class="text-justify">
-        Ženska ali moška manikira vsebuje oblikovanje in urejanje nohtov, natančno urejanje obnohtne kožice z brusilnimi nastavki po ruski metodi,
-        nego s hranilnim oljem in vlažilno kremo ter kratko, sproščujočo masažo rok. 
-      </p>
-      <p class="text-justify">
-        »𝘒𝘢𝘫 𝘫𝘦 '𝘬𝘰𝘮𝘣𝘪' 𝘮𝘢𝘯𝘪𝘬𝘪𝘳𝘢?« Kombinirana manikira združuje uporabo električnega brusilnika za nohte ter kleščic za najboljše rezultate pri izgledu obnohtne kožice. 
-        Postopek je neboleč, saj se odstranjuje in ureja le odmrle in suhe dele kože. 
-      </p>
-      <p class="text-justify">
-        *V vse ostale storitve je že vključena dodatna storitev, kombinirana manikira, saj pri lakiranih nohtih podaljša in zamakne videz narastka za pribl. 10 dni.
-      </p>
-      <h1>PERMANENTNO LAKIRANJE</h1>
-      <ul class="leaders bottom-space">
-        <li class="dots"><span class="name">PERMANENTNO LAKIRANJE</span> <span class="price">28€</span></li>
-        <li class="dots"><span class="name">KOREKTURA PERM LAKIRANJA (2-4 t)</span> <span class="price">30€</span></li>
-        <li class="dots">
-          <span class="name">KOREKTURA PERM LAKIRANJA (nad 4 t)</span> <span class="price">33€</span>
-        </li>
-      </ul>
-      <ul class="leaders bottom-space">
-        <li class="dots"><span class="name">ODSTRANJEVANJE PERM LAKIRANJA</span> <span class="price">15€</span></li>
-        <li class="dots"><span class="name">ODSTRANJEVANJE IN NOV NANOS</span> <span class="price">+5€</span></li>
-        <li class="dots"><span class="name">POPRAVILO NOHTA</span> <span class="price">+2,50€</span></li>
-      </ul>
+    <div id="siIframe">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQAv814MsJ-7es4KGoHzbIwhQxvLDBXRyzWEJETRQf8DhEXWG_m_cRB9ENF8eeUjHDapXua0QMa49aQ/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
 
-      <h1>GELIRANJE IN PODALJŠEVANJE</h1>
-      <ul class="leaders bottom-space">
-        <li><span>PODALJŠEVANJE NOHTOV SALONSKIH OBLIK (KOCKA/OVAL)</span></li>
-        <li class="dots"><span class="name">DOLŽINA S</span> <span class="price">40€</span></li>
-        <li class="dots"><span class="name">KOREKTURA (2-4 t)</span> <span class="price">35€</span></li>
-        <li class="dots"><span class="name">KOREKTURA (nad 4 t)</span> <span class="price">38€</span></li>
-      </ul>
-      <ul class="leaders bottom-space">
-        <li>PODALJŠEVANJE NOHTOV SALONSKIH OBLIK (KOCKA/OVAL/MANDELJ/BALLERINA)</li>
-        <li class="dots"><span class="name">DOLŽINA M</span> <span class="price">43€</span></li>
-        <li class="dots"><span class="name">KOREKTURA (2-4 t)</span> <span class="price">38€</span></li>
-        <li class="dots"><span class="name">KOREKTURA (nad 4 t)</span> <span class="price">40€</span></li>
-      </ul>
-      <ul class="leaders bottom-space">
-        <li><span>PODALJŠEVANJE NOHTOV EKSTREMNIH OBLIK ALI DOLŽIN (KOCKA/STILETTO/BALLERINA)</span></li>
-        <li class="dots"><span class="name">DOLŽINA L/XL</span> <span class="price">(L) 46€ (XL) 55€</span></li>
-        <li class="dots"><span class="name">KOREKTURA (2-4 t)</span> <span class="price">(L) 42€ (XL) 48€</span></li>
-        <li class="dots"><span class="name">KOREKTURA (nad 4 t)</span> <span class="price">(L) 44€ (XL) 50€</span></li>
-      </ul>
-      <ul class="leaders bottom-space">
-        <li><span class="name">GELIRANJE NARAVNIH NOHTOV</span></li>
-        <li class="dots"><span class="name">DOLŽINA S</span> <span class="price">35€</span></li>
-        <li class="dots"><span class="name">DOLŽINA M</span> <span class="price">38€</span></li>
-        <li class="dots"><span class="name">DOLŽINA L</span> <span class="price">40€</span></li>
-      </ul>
-      <ul class="leaders bottom-space">
-        <li class="dots"><span class="name">ODSTRANJEVANJE GELIRANIH NOHTOV</span> <span class="price">20€</span></li>
-        <li class="dots"><span class="name">ODSTRANJEVANJE IN NOVO GELIRANJE</span> <span class="price">+5€</span></li>
-        <li class="dots">
-          <span class="name">ODSTRANJEVANJE IN NOVO PODALJŠEVANJE</span> <span class="price">+5€</span>
-        </li>
-         <li class="dots"><span class="name">SPREMEMBA OBLIKE</span> <span class="price">+3€</span></li>
-        <li class="dots"><span class="name">POPRAVILO NOHTA</span> <span class="price">+4,50€</span></li>
-      </ul>
-
-      <h1>POSLIKAVE IN DODATKI</h1>
-      <ul class="leaders bottom-space">
-        <li class="dots">
-          <span class="name">GRAJENA FRANCOSKA</span> <span class="price">1 noht/+2€ - vsi/+10€</span>
-        </li>
-        <li class="dots">
-          <span class="name">GRAJENE BLEŠČICE</span> <span class="price">1 noht/+2€ - vsi/+10€</span>
-        </li>
-      </ul>
-      <ul class="leaders">
-        <li><span>ROČNE POSLIKAVE, FOLIJE IN DODATKI</span></li>
-        <li class="dots">
-      <span class="name">I. PREPROSTO</span> <span class="price">1 noht/+0,50€-1€ - vsi/5-8€</span>
-        </li>
-        <li class="dots">
-          <span class="name">II. ZAHTEVNEJŠE</span> <span class="price">1 noht/+1,5-2€ - vsi/8-10€</span>
-        </li>
-      </ul>
-      <p class="text-right bottom-space">
-        I. vse manjše poslikave, marble, enobarvne vijugice, večbarvna francoska, folije, itd.<br />
-        II. večbarvne poslikave, plamenčki, večbarvne vijugice, snake skin, itd.
-      </p>
-      <ul class="leaders bottom-space">
-        <li class="dots">
-          <span class="name">KRISTALČKI, OKRASKI</span> <span class="price">1 kos/0,25€ - 0,50€ - 0,75€</span>
-        </li>
-     
-        <li class="dots"><span class="name">SWAROVSKI SS3-SS5</span> <span class="price">1 kos/0,25-0,50€</span></li>
-        <li class="dots"><span class="name">SWAROVSKI SS8-SS12</span> <span class="price">1 kos/0,75-1€</span></li>
-        <li class="dots"><span class="name">SWAROVSKI SS16+</span> <span class="price">1 kos/1,50€-3€</span></li>
-         <li class="dots"><span class="name">PIERCING</span> <span class="price">1 kos/2€</span>
-        </li>  
-        <li class="dots"><span class="name">POM POM MAGNET</span> <span class="price">1 kos/3€</span>
-        </li>
-        
-      </ul>
-
-      <h1>OBRVI</h1>
-      <ul class="leaders bottom-space">
-        <li class="dots"><span class="name">OBLIKOVANJE Z VOSKOM IN PINCETO MINI</span> <span class="price">8€</span></li>
-        <li class="dots">
-          <span class="name">OBLIKOVANJE Z VOSKOM IN PINCETO MAXI</span> <span class="price">13€</span>
-        </li>
-         <li class="dots">
-          <span class="name">OBLIKOVANJE IN BARVANJE</span> <span class="price">18€</span>
-        </li>
-           <li class="dots">
-          <span class="name">BARVANJE</span> <span class="price">10€</span>
-        </li>
-         <li class="dots">
-          <span class="name">LAMINACIJA OBRVI</span> <span class="price">38€</span>
-        </li>
-      </ul>
-      <p class="text-justify">
-        *V ceno laminacije je vključeno barvanje, ščetka za razčesavanje ter negovalna krema za enkratno uporabo.
-        Več o negi po laminaciji si lahko preberete »<a href="/lami-aftercare">𝘵𝘶𝘬𝘢𝘫</a>«.
-      </p>
-      <p class="text-justify">
-        »𝘒𝘢𝘫 𝘫𝘦 𝘭𝘢𝘮𝘪𝘯𝘢𝘤𝘪𝘫𝘢?« Laminacija obrvi je poltrajna neboleča metoda urejanja obrvi pri kateri se s pomočjo serumov dlačice usmeri v željen položaj in s tem doseže popoln naraven videz obrvi.
-        Obrvi z minimalnim vzdrževanjem ostanejo urejene do 7 tednov. Za razliko od microbladinga je metoda poltrajna, zato ne rabite skrbeti, ali vam bo rezultat všeč ali ne, saj se dlačice vedno lahko počešejo v željeno oziroma prvotno smer.
-        Je odlična rešitev za obrvi, katerih dlake rastejo v različne smeri, neurejene obrvi, asimetrične obrvi, neukrotljive obrvi in obrvi z nepolnim videzom.
-      </p>
-        
-      <h1>IZDELKI ZA NEGO</h1>
-      <ul class="leaders bottom-space">
-        <li><span>LILLY NAILS KREMA ZA ROKE (30ML) </span></li>
-        <li class="dots"><span class="name">STRAWBERRY</span> <span class="price">9,30€</span></li>
-        <li class="dots">
-          <span class="name">LILLY FLOWER</span> <span class="price">9,30€</span>
-        </li>
-      </ul>
-        
-      <ul class="leaders bottom-space">
-        <li><span>DIVINE NAILS OLJE ZA OBNOHTNO KOŽICO (10ML)</span></li>
-        <li class="dots">
-          <span class="name">HUBBA BUBBA</span> <span class="price">8,00€</span>
-        </li>
-         <li class="dots">
-          <span class="name">JUICY LEMON</span> <span class="price">8,00€</span>
-        </li>
-      </ul>
-      
-      <ul class="leaders bottom-space">
-        <li><span>NEGOVALNI SERUM ZA UTRJEVANJE OBRVI IN TREPALNIC (6ML)</span></li>
-        <li class="dots"><span class="name">INLEI LASH FASHION SERUM</span> <span class="price">30€</span></li>
-        <li class="dots"><span class="name">KRTAČKA ZA RAZČESAVANJE V EPRUVETI</span> <span class="price">1,80€</span></li>
-      </ul>
-      
-      <p class="text-justify">
-        Več o izdelkih za nego si lahko preberete »<a href="/products">𝘵𝘶𝘬𝘢𝘫</a>«.
-      </p>
-    
-      <h1>DARILNI BONI</h1>
-      <ul class="leaders bottom-space">
-        <li class="dots"><span class="name">V VREDNOSTI</span> <span class="price">15€</span></li>
-        <li class="dots"><span class="name"></span> <span class="price">20€</span></li>
-        <li class="dots"><span class="name"></span> <span class="price">25€</span></li>
-      </ul>
-      <p class="text-justify">
-        Zamenjava bona za denar ni možna. Možno je le doplačilo in izbria druge storitve v drugi vrednosti. Darilni bon
-        je veljaven 6 mesecev od dneva nakupa.
-      </p>
-      <br />
-      
-      <div class="text-justify no-top-space no-bottom-space">
-        <small>
-          <p class="text-justify no-bottom-space">Cenik velja od 10.10.2022. Pridržujem si pravico do spremembe cen.</p>
-          <p class="text-justify no-top-space">DDV ni obračunan na podlagi 1. odstavka 94. člena ZDDV-1. Plačilo je možno le z gotovino. </p>
-        </small>
-      </div>
+    <div id="enIframe" class="hide">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRfeQOrax9ERyocVrJjcTyJA6nHXNpLIEEuUz0Kn9OQgbEDXXbRrcQOWvG7JdTCKThWp3MoAuwtzaVu/pubhtml?widget=true&amp;headers=false"></iframe>
     </div>
   </body>
 </html>
